@@ -29,6 +29,8 @@ import javax.persistence.Table;
                 // make all lower case
                 @TokenFilterDef(factory = LowerCaseFilterFactory.class)
         })
+// currently Hibernate searches analyzers only where entities are defined. That's why I created an entity here instead of
+// defining it inside Comment class
 @Entity
 @Table(name = "analyzer_definition")
 public class AnalyzerDefinition {
